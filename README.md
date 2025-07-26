@@ -30,6 +30,12 @@ The simulation runs with four different parameter combinations:
 3. Speed: 2 m/s, Pause time: 0 seconds
 4. Speed: 2 m/s, Pause time: 50 seconds
 
+## Documentation
+
+- [Setup Instructions](docs/SETUP.md) - How to install and configure CSIM20
+- [Algorithm Details](docs/ALGORITHM.md) - Technical details of the RWP model
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to this project
+
 ## Getting Started
 
 Coming soon...
