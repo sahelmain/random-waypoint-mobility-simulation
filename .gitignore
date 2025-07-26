@@ -1,0 +1,23 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+*.a
+
+# CSIM compiled files
+proj3_*
+pro3_*
+
+# IDE files
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
+
+# Log files
+*.log
+
+# Temporary files
+*~
+*.tmp 
