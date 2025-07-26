@@ -32,6 +32,7 @@ The simulation runs with four different parameter combinations:
 
 ## Documentation
 
+- [Project Requirements](docs/REQUIREMENTS.md) - Official project specifications and deliverables
 - [Setup Instructions](docs/SETUP.md) - How to install and configure CSIM20
 - [Algorithm Details](docs/ALGORITHM.md) - Technical details of the RWP model
 - [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to this project
