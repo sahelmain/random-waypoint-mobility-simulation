@@ -14,6 +14,22 @@ This project simulates 25 mobile nodes in a 1000x1000m network using the Random 
 - **Speed**: 1 or 2 m/sec
 - **Pause time**: 0 or 50 seconds
 
+## Expected Outputs
+
+The simulation will generate:
+- Initial network topology graph
+- Network topology snapshots at 2,000 and 4,000 simulation times
+- Average moving distance calculations
+- Comparative analysis across different parameter sets
+
+## Test Scenarios
+
+The simulation runs with four different parameter combinations:
+1. Speed: 1 m/s, Pause time: 0 seconds
+2. Speed: 1 m/s, Pause time: 50 seconds
+3. Speed: 2 m/s, Pause time: 0 seconds
+4. Speed: 2 m/s, Pause time: 50 seconds
+
 ## Getting Started
 
 Coming soon...
