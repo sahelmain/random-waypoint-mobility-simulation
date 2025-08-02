@@ -2,27 +2,42 @@
 """
 Graph generator for Random Waypoint Mobility simulation
 Converts topology .txt files to visual graphs
+Author: Sahel Azzam
+Course: CS5331 - Mobile Data Management and Privacy
 """
 
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import os
+import sys
 
 def read_topology_file(filename):
-    """Read topology data from file"""
+    """Read topology data from file with error handling"""
     nodes = []
-    with open(filename, 'r') as f:
-        for line in f:
-            if line.startswith('#') or line.strip() == '':
-                continue
-            parts = line.strip().split()
-            if len(parts) >= 4:
-                node_id = int(parts[0])
-                x = float(parts[1])
-                y = float(parts[2])
-                state = parts[3]
-                nodes.append({'id': node_id, 'x': x, 'y': y, 'state': state})
-    return nodes
+    try:
+        with open(filename, 'r') as f:
+            for line_num, line in enumerate(f, 1):
+                if line.startswith('#') or line.strip() == '':
+                    continue
+                parts = line.strip().split()
+                if len(parts) >= 4:
+                    try:
+                        node_id = int(parts[0])
+                        x = float(parts[1])
+                        y = float(parts[2])
+                        state = parts[3]
+                        nodes.append({'id': node_id, 'x': x, 'y': y, 'state': state})
+                    except ValueError as e:
+                        print(f"Warning: Invalid data on line {line_num} in {filename}: {e}")
+                        continue
+        return nodes
+    except FileNotFoundError:
+        print(f"Error: File {filename} not found")
+        return []
+    except Exception as e:
+        print(f"Error reading {filename}: {e}")
+        return []
 
 def create_topology_graph(filename, title, output_file):
     """Create a scatter plot of node positions"""
