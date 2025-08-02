@@ -79,6 +79,18 @@ void select_random_destination(Node* node)
 
 void initialize_nodes(Node nodes[], double speed, double pause_time) 
 {
+    // Input validation
+    if (nodes == NULL) {
+        printf("Error: nodes array is NULL\n");
+        return;
+    }
+    if (speed < 0.1 || speed > 50.0) {
+        printf("Warning: speed %.2f outside recommended range [0.1, 50.0]\n", speed);
+    }
+    if (pause_time < 0 || pause_time > 3600) {
+        printf("Warning: pause_time %.2f outside recommended range [0, 3600]\n", pause_time);
+    }
+    
     srand(time(NULL));
     for(int i = 0; i < NUM_OF_NODES; i++) 
     {
