@@ -1,0 +1,60 @@
+
+1
+CS5331: Mobile Data Management and Privacy 
+Summer II 2025 
+ 
+Project #3: Mobile Users – Random Waypoint Mobility (RWP) 
+ 
+• Name only: ____________________________________ 
+• Release date: July 24, 2025 (Thursday) 
+• Due date: August 6, 2025 (Wednesday), submit through Raider Canvas before midnight, 
+11:59 PM  
+• It should be done individually; No handwritten code or report; No email submission; No late project 
+will be accepted.  
+• Total 20 points 
+  
+1.  Implement  mobile  users  following  a  simple  random  waypoint  mobility  (RWP)  model.  There  is  a 
+network where 25 nodes are uniformly distributed. Each node randomly selects a destination location and 
+moves toward it at a given speed. Upon arrival, each node stays at the destination for a pausing time. 
+Then select another random destination and move toward it. Repeat the same procedure. Refer to the 
+following simulation parameters. Run your program at least four times by changing parameters (speed, 
+pause time), e.g., (1, 0), (1, 50), (2, 0), and (2, 50).    
+ 
+Parameter  Value 
+Number of nodes  25 
+Network size  1,000 x 1,000 m2 
+Mobility  Random Waypoint  
+Speed  1 or 2 m/sec 
+Pause time  0 or 50 secs 
+ 
+     For  each  end  of  simulation  run,  draw/produce  the  following  graphs/results  and  compare  them  for 
+analysis.    
+• [Graph] An initial network topology 
+• [Graph] Snapshots of the network topologies after the simulation times, 2,000 and 4,000.  
+• Average moving distance (total amount of moving distances / number of nodes) 
+ 
+2. Type the project number and your name (Last, First) at the top of your source code. 
+• /* Project #3; Bond, James */ 
+ 
+3. Refer to CSIM manual uploaded in the class homepage:   
+• CSIM20 Quick Start Guide for C 
+• CSIM20 User's Guide for C  
+• http://www.mesquite.com/documentation/ 
+ 
+4. Compilation & Run:  
+• ./csim.gcc proj3_bond_james.c –o proj3_bond_james 
+• ./proj3_bond_james 
+ 
+5. What to submit?   
+• Source code(s)  
+o Your  source  code  name  should  be  “project  number”  +  “last  name”  +  “first  name”,  e.g., 
+“pro3_bond_james.c”. 
+• Report (e.g., pdf) including,  
+o Your  report  file  name  should  be  “project  number”  +  “last  name”  +  “first  name”,  e.g., 
+“pro3_bond_james.pdf”. 
+o Instructions on how to run your program 
+o All the simulation parameters or assumption(s) deployed 
+o One  initial  network  topology  graph,  eight  snapshot  graphs  (two/run),  average  moving 
+distance, and analysis/explanation 
+o Any implementation issues or anything you want to mention  
+• The TA will compile and run your source code(s) for validity.  
