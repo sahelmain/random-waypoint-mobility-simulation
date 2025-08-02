@@ -39,8 +39,12 @@ void run_simulation(double speed, double pause_time, char* scenario_name);
 
 int main() 
 {
+    // Display project header and simulation information
     printf("/* Project #3; Azzam, Sahel */\n");
     printf("Random Waypoint Mobility Simulation\n\n");
+    
+    // Execute all four required simulation scenarios
+    // Each scenario tests different combinations of speed and pause parameters
     
     printf("Running scenario 1: Speed 1 m/s, Pause 0 seconds\n");
     run_simulation(1.0, 0.0, "scenario1");
