@@ -1,7 +1,3 @@
-/* Project #3; Azzam, Sahel */
-/* Random Waypoint Mobility Simulation */
-/* CS5331 - Mobile Data Management and Privacy */
-
 #include "csim.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +9,6 @@
 #define SIMULATION_TIME 5000
 #define snapshot_time1 2000
 #define snapshot_time2 4000
-
 
 #define MOVING 0
 #define PAUSED 1
@@ -28,7 +23,6 @@ typedef struct {
     double pause_end_time;
 } Node;
 
-
 void initialize_nodes(Node nodes[], double speed, double pause_time);
 void select_random_destination(Node* node);
 double calculate_distance(double x1, double y1, double x2, double y2);
@@ -39,12 +33,7 @@ void run_simulation(double speed, double pause_time, char* scenario_name);
 
 int main() 
 {
-    // Display project header and simulation information
-    printf("/* Project #3; Azzam, Sahel */\n");
     printf("Random Waypoint Mobility Simulation\n\n");
-    
-    // Execute all four required simulation scenarios
-    // Each scenario tests different combinations of speed and pause parameters
     
     printf("Running scenario 1: Speed 1 m/s, Pause 0 seconds\n");
     run_simulation(1.0, 0.0, "scenario1");
@@ -79,7 +68,6 @@ void select_random_destination(Node* node)
 
 void initialize_nodes(Node nodes[], double speed, double pause_time) 
 {
-    // Input validation
     if (nodes == NULL) {
         printf("Error: nodes array is NULL\n");
         return;
