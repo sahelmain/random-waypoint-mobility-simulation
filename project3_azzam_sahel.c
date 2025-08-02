@@ -1,4 +1,8 @@
-// #include "csim.h"  // Temporarily commented for testing
+/* Project #3; Azzam, Sahel */
+/* Random Waypoint Mobility Simulation */
+/* CS5331 - Mobile Data Management and Privacy */
+
+#include "csim.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
