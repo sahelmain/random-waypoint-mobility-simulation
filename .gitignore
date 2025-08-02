@@ -1,23 +1,209 @@
-# Compiled executables
+# Random Waypoint Mobility Simulation - Git Ignore
+# Author: Sahel Azzam
+# CS5331 - Mobile Data Management and Privacy
+
+# ============================================================================
+# COMPILED EXECUTABLES AND OBJECTS
+# ============================================================================
+
+# C/C++ compiled files
 *.exe
 *.out
 *.o
 *.a
+*.so
+*.dylib
+
+# Executable target
+proj3_azzam_sahel
+project3_azzam_sahel
 
 # CSIM compiled files
 proj3_*
 pro3_*
 
+# Debug builds
+*.dSYM/
+*.su
+
+# ============================================================================
+# DEVELOPMENT ENVIRONMENTS
+# ============================================================================
+
 # IDE files
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# MacOS
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Eclipse
+.metadata
+.project
+.cproject
+
+# ============================================================================
+# OPERATING SYSTEM FILES
+# ============================================================================
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ============================================================================
+# TEMPORARY AND LOG FILES
+# ============================================================================
 
 # Log files
 *.log
+*.err
+*.trace
 
 # Temporary files
-*~
-*.tmp 
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Core dumps
+core
+core.*
+
+# ============================================================================
+# BUILD AND COMPILATION ARTIFACTS
+# ============================================================================
+
+# Make artifacts
+.deps/
+.libs/
+*.la
+*.lo
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Autotools
+autom4te.cache/
+config.log
+config.status
+
+# ============================================================================
+# SIMULATION OUTPUT FILES (OPTIONAL IGNORE)
+# ============================================================================
+
+# Uncomment these lines if you want to ignore simulation outputs
+# scenario*.txt
+# scenario*.png
+
+# ============================================================================
+# PYTHON AND ANALYSIS TOOLS
+# ============================================================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# ============================================================================
+# DOCUMENTATION AND REPORTS
+# ============================================================================
+
+# Generated documentation
+doc/html/
+doc/latex/
+*.pdf
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
+
+# ============================================================================
+# ARCHIVES AND PACKAGES
+# ============================================================================
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Package files
+*.deb
+*.rpm
+
+# ============================================================================
+# CSIM SPECIFIC FILES
+# ============================================================================
+
+# CSIM temporary files
+*.csim
+*.sim
+sim.out
+
+# CSIM configuration
+csim.cfg
+
+# ============================================================================
+# PERFORMANCE AND PROFILING
+# ============================================================================
+
+# Profiling output
+gmon.out
+perf.data*
+*.gcda
+*.gcno
+
+# Valgrind
+vgcore.*
+massif.*
+
+# ============================================================================
+# SECURITY AND CREDENTIALS
+# ============================================================================
+
+# SSH keys
+*.pem
+*.key
+
+# Environment variables
+.env
+.env.local 
