@@ -1,8 +1,10 @@
-#include "csim.h"
+/* Project #3; Azzam, Sahel */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include "csim.h"
 
 #define NUM_OF_NODES 25
 #define size_of_network 1000
@@ -12,17 +14,14 @@
 
 #define MOVING 0
 #define PAUSED 1
-
+// node struct for the nodes in the network
 typedef struct {
-    int identifier;
-    double x, y;
-    double x_destination, y_destination;
-    double speed;
-    double pause_time, total_distance_traveled;
-    int state;
-    double pause_end_time;
+    int identifier, state;
+    double x, y, x_destination, y_destination;
+    double speed, pause_time, total_distance_traveled, pause_end_time;
 } Node;
 
+// function prototypes
 void initialize_nodes(Node nodes[], double speed, double pause_time);
 void select_random_destination(Node* node);
 double calculate_distance(double x1, double y1, double x2, double y2);
@@ -50,22 +49,7 @@ int main()
     return 0;
 }
 
-double calculate_distance(double x1, double y1, double x2, double y2) 
-{
-    double dx = x2 - x1;
-    double dy = y2 - y1;
-    return sqrt(dx * dx + dy * dy);
-}
-
-void select_random_destination(Node* node) 
-{
-    double random_x = (double)rand() / RAND_MAX;
-    double random_y = (double)rand() / RAND_MAX;
-    
-    node->x_destination = random_x * size_of_network;
-    node->y_destination = random_y * size_of_network;
-}
-
+// this function initializes the nodes in the network with random positions, speeds, and pause times
 void initialize_nodes(Node nodes[], double speed, double pause_time) 
 {
     if (nodes == NULL) {
@@ -96,6 +80,25 @@ void initialize_nodes(Node nodes[], double speed, double pause_time)
     }
 }
 
+// this function selects a random destination for the node in the network
+void select_random_destination(Node* node) 
+{
+    double random_x = (double)rand() / RAND_MAX;
+    double random_y = (double)rand() / RAND_MAX;
+    
+    node->x_destination = random_x * size_of_network;
+    node->y_destination = random_y * size_of_network;
+}
+
+// this function calculates the distance between two points in the network
+double calculate_distance(double x1, double y1, double x2, double y2) 
+{
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+    return sqrt(dx * dx + dy * dy);
+}
+
+// this function moves the node in the network based on the speed, time step, and current time
 void move_node(Node* node, double time_step, double current_time) 
 {
     if(node->state == PAUSED) 
@@ -135,6 +138,7 @@ void move_node(Node* node, double time_step, double current_time)
     }
 }
 
+// this function prints the topology of the network to a file at a given time 
 void print_topology(Node nodes[], char* filename, double current_time) 
 {
     FILE *file = fopen(filename, "w");
@@ -160,11 +164,12 @@ void print_topology(Node nodes[], char* filename, double current_time)
     printf("Topology saved to %s\n", filename);
 }
 
+// this function calculates the average distance traveled by the nodes in the network 
 double calculate_average_distance(Node nodes[]) 
 {
     double total_distance = 0.0;
     
-    for(int i = 0; i < NUM_OF_NODES; i++) 
+    for (int i = 0; i < NUM_OF_NODES; i++) 
     {
         total_distance += nodes[i].total_distance_traveled;
     }
@@ -172,6 +177,7 @@ double calculate_average_distance(Node nodes[])
     return total_distance / NUM_OF_NODES;
 }
 
+// this function runs the simulation for a given speed, pause time, and scenario name
 void run_simulation(double speed, double pause_time, char* scenario_name) 
 {
     Node nodes[NUM_OF_NODES];
@@ -213,3 +219,4 @@ void run_simulation(double speed, double pause_time, char* scenario_name)
     printf("Average distance traveled: %.2f meters\n", avg_distance);
     printf("Speed: %.1f m/s, Pause time: %.1f seconds\n\n", speed, pause_time);
 }
+// end of the program
