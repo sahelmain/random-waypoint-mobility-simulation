@@ -1,0 +1,35 @@
+{
+  "project": "Random Waypoint Mobility Simulation",
+  "author": "Sahel Azzam",
+  "course": "CS5331",
+  "scenarios": {
+    "scenario1": {
+      "speed": 1,
+      "pause": 0,
+      "avg_distance": 4986.2,
+      "nodes": 25
+    },
+    "scenario2": {
+      "speed": 1,
+      "pause": 50,
+      "avg_distance": 4580.1,
+      "nodes": 25
+    },
+    "scenario3": {
+      "speed": 2,
+      "pause": 0,
+      "avg_distance": 9943.7,
+      "nodes": 25
+    },
+    "scenario4": {
+      "speed": 2,
+      "pause": 50,
+      "avg_distance": 8384.5,
+      "nodes": 25
+    }
+  },
+  "simulation_time": 5000,
+  "network_size": "1000x1000m",
+  "implementation": "Event-driven with CSIM",
+  "status": "Complete"
+}
